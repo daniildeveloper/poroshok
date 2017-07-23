@@ -9,6 +9,14 @@ var mincss = require("gulp-minify-css");
 var concat = require('gulp-concat');
 var watch = require("gulp-watch");
 var pug = require('gulp-pug');
+var pugLinter = require('gulp-pug-linter');
+var notify = require('gulp-notify');
+
+var pugLinterReporter = function (errors) {
+  if(errors.length) {
+    console.log(errors);
+  }
+}
 
 gulp.task('default', ['images-to-dist', 'fonts-prepare', "bootstrap-prepare", 'less-prebuild', 'js-prepare'], function () {
   browserSync.init({
@@ -52,7 +60,12 @@ gulp.task('default', ['images-to-dist', 'fonts-prepare', "bootstrap-prepare", 'l
   watch('./src/pug/**/*.pug', function () {
     console.log('pug changed');
     return gulp.src('./src/pug/**/*.pug')
-      .pipe(pug())
+      .pipe(pug({
+        pretty: true
+      }))
+      .on('error', notify.onError(function (err) {
+        return "Pug error: " + err.message
+      }))
       .pipe(gulp.dest('./dist/'))
       .pipe(reload({
         stream: true
