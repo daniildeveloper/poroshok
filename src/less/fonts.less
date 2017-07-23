@@ -1,6 +1,10 @@
 @font-face {
-    font-family: 'BebasNeue';
-    src: url('./../fonts/BebasNeue.ttf');
+    font-family: 'BebasNeueRegular';
+    src: url('./../fonts/BebasNeue Regular.ttf');
+}
+@font-face {
+    font-family: 'BebasNeueBold';
+    src: url('./../fonts/BebasNeue Bold.ttf');
 }
 
 @font-face {
@@ -19,7 +23,11 @@
 }
 
 .bebas {
-    font-family: 'BebasNeue', 'sans-serif';
+    font-family: 'BebasNeueRegular', 'sans-serif' !important;
+}
+.bebas-bold{
+    font-family: 'BebasNeueBold', 'sans-serif' !important;
+    font-weight: bold;
 }
 
 .ptsans-regular {
@@ -32,4 +40,13 @@
 
 .ptsans-italic {
     font-family: 'PTSansItalic';
+}
+
+// font sizes
+.fs-26 {
+    font-size: 26px;
+}
+
+.bebas-spacing{
+    letter-spacing: 3px;
 }
