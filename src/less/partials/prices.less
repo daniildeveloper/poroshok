@@ -1,0 +1,54 @@
+.prices-container {
+    .prices {
+        display: flex;
+        flex-direction: column;
+        align-content: stretch;
+        align-items: stretch;
+        header {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            ;
+            align-content: stretch;
+            background: @price-header-bg;
+            .number {
+                background: @blue;
+                padding: 15px 20px;
+                color: #fff;
+                .bebas;
+            }
+            .heading {
+                background: @price-header-bg;
+                padding: 6px 5px;
+                padding-left: 10px;
+                h4 {
+                    .bebas;
+                    color: #fff;
+                    letter-spacing: 2px;
+                }
+            }
+        }
+        main {
+            .prices-row {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                padding-left: 50px;
+                padding-right: 50px;
+                &:nth-child(even) {
+                    background: @gray-row;
+                }
+                &:hover {
+                    background: @gray-hover-row;
+                }
+                .name,
+                .price {
+                    padding: 6px;
+                }
+            }
+        }
+    }
+}
