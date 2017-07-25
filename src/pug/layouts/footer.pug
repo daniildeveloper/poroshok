@@ -1,15 +1,17 @@
-.footer
-  
-  script(src='js/bootstrap.min.js')
-  script(type='text/javascript').
-    $(document).ready(function() {
-    /*
-    var defaults = {
-    containerID: 'toTop', // fading element id
-    containerHoverID: 'toTopHover', // fading element hover id
-    scrollSpeed: 1200,
-    easingType: 'linear'
-    };
-    */
-    $().UItoTop({ easingType: 'easeOutQuart' });
-    });
+footer.footer
+  .container
+    .row
+      .col-md-6
+        .logo.bebas-bold порошковая 
+          span покраска 
+          | профиля
+        p &copy; 2007 Все права защищены. ПОРОШКОВАЯ ПОКРАСКА ПРОФИЛЯ
+      .col-md-6
+        div.row
+          .col-md-5 
+            a.bebas-bold.phone(href="tel: +7 (495) 661-61-31") +7 (495) 661-61-31
+          .col-md-7
+            a.btn.btn-footer.bebas(href="#") Заказать звонок
+            br
+            p.scheme.pull-right
+              a(href="#") Схема проезда
